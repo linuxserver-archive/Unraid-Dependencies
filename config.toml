@@ -1,0 +1,8 @@
+[nvidia-container-cli]
+#root = "/run/nvidia/driver"
+path = "/usr/local/bin/nvidia-container-cli"
+environment = ["NV_INSECURE=1"]
+debug = "/var/log/nvidia-container-runtime-hook.log"
+ldcache = "/etc/ld.so.cache"
+load-kmods = true
+ldconfig = '@/sbin/ldconfig'
