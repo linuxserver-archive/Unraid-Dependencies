@@ -76,7 +76,7 @@ done
 # Current RUNC that lines up with docker 18.09.1
 # https://github.com/NVIDIA/nvidia-container-runtime/tree/master/runtime/runc/96ec2177ae841256168fcf76954f7177af9446eb
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Release - "
-export RUNC_GIT_HASH="96ec2177ae841256168fcf76954f7177af9446eb"
+export RUNC_GIT_HASH="8084f7611e4677174c8dbeb17152f3390fa41952"
 
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Container Runtime Hook Release - "
 export NVIDIA_HOOK_SHA1="1ac122a9c7b9745749ffa72a1d4f71c70a8a8ab3"
