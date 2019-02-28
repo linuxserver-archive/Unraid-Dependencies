@@ -72,7 +72,6 @@ package_locations_current=$(grep "/$i-[[:digit:]].*.txz$" NVIDIA_FILE_LIST_CURRE
 echo "$slack_package_current_urlbase""$package_locations_current" >> "$D"/NVIDIA_URLS_CURRENT
 done
 
-
 # RUNC version installed in Unraid
 # https://github.com/NVIDIA/nvidia-container-runtime/tree/master/runtime/runc/96ec2177ae841256168fcf76954f7177af9446eb
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Release - "
