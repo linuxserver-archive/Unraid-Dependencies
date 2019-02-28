@@ -84,5 +84,5 @@ export NVIDIA_HOOK_SHA1="1ac122a9c7b9745749ffa72a1d4f71c70a8a8ab3"
 ##current NVIDIA Release
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Release - "
 ##Releases grabbed here: https://download.nvidia.com/XFree86/Linux-x86_64/ 
-export NVIDIA_DRIVER_VERSION="410.78"
+export NVIDIA_DRIVER_VERSION="418.30"
 
