@@ -73,10 +73,10 @@ echo "$slack_package_current_urlbase""$package_locations_current" >> "$D"/NVIDIA
 done
 
 # RUNC version installed in Unraid
-# https://github.com/NVIDIA/nvidia-container-runtime/tree/master/runtime/runc/96ec2177ae841256168fcf76954f7177af9446eb
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Release - "
 export RUNC_GIT_HASH="$(runc --version | grep commit: | cut -d" " -f2)"
 
+# Run runc --version | grep commit: | cut -d" " -f2 and look for matching commit here https://github.com/NVIDIA/nvidia-container-runtime/tree/master/runtime/runc
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Container Runtime Hook Release - "
 export NVIDIA_HOOK_SHA1="1ac122a9c7b9745749ffa72a1d4f71c70a8a8ab3"
 
