@@ -74,9 +74,9 @@ done
 
 # RUNC version installed in Unraid
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Release - "
-export RUNC_GIT_HASH="$(runc --version | grep commit: | cut -d" " -f2)"
+export RUNC_GIT_HASH="$(docker info | grep "runc version: " | cut -d":" -f2 | cut -d" " -f2)"
 
-# Run runc --version | grep commit: | cut -d" " -f2 and look for matching commit here https://github.com/NVIDIA/nvidia-container-runtime/tree/master/runtime/runc
+# Run docker info | grep "runc version: " | cut -d":" -f2 | cut -d" " -f2 and look for matching commit here https://github.com/NVIDIA/nvidia-container-runtime/tree/master/runtime/runc
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Container Runtime Hook Release - "
 export NVIDIA_HOOK_SHA1="96ec2177ae841256168fcf76954f7177af9446eb"
 
