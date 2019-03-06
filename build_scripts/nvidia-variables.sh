@@ -23,6 +23,7 @@ graphite2 \
 shared-mime-info \
 harfbuzz \
 libdrm \
+libffi \
 libpciaccess \
 libpng \
 libpthread-stubs \
