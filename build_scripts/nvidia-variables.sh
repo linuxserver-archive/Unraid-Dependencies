@@ -85,3 +85,5 @@ export NVIDIA_HOOK_SHA1="96ec2177ae841256168fcf76954f7177af9446eb"
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    current NVIDIA Release - "
 export NVIDIA_DRIVER_VERSION="$(curl -silent https://slackbuilds.org/slackbuilds/14.2/system/nvidia-driver/nvidia-driver.info | grep VERSION= | cut -d"=" -f2 | sed -e 's/^"//' -e 's/"$//')"
 
+#libnvidia-container-version
+export CONTAINER_VERSION="1.0.1"
