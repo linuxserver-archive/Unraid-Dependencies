@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-##set our package list
+##set our package list - Note gcc & gcc-g++ fixed for now until LT upgrade to GCC v9.x
 echo -e "${BLUE}Variables.sh${NC}    -----    set our package list"
 slack_package_current=(\
 autoconf \

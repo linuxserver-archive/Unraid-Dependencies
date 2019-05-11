@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+##set our package list - Note gcc-go fixed for now until LT upgrade to GCC v9.x
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    set our package list"
 slack_package_current=(\
 atk \
