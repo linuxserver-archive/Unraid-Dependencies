@@ -23,6 +23,7 @@ shared-mime-info \
 harfbuzz \
 libdrm \
 libffi \
+libglvnd \
 libpciaccess \
 libpng \
 libpthread-stubs \
