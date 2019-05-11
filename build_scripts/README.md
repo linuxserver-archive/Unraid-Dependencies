@@ -1,25 +1,16 @@
 ![https://linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)
 
-## Uploading
+## Unraid Dependencies
 
-Set up an s3cmd docker container with the following:
+### Format of variable files
+* Commmon variables `variables.sh`
+* Nvidia specific variables `nvidia-variables.sh`
+* DVB specific variables `dvb-variables.sh`
 
-```
-docker create \
-  --name=s3cmd \
-  -v /mnt/disk1/appdata/s3cmd:/config \
-  -v /mnt:/mnt:ro \
-  -e TZ=Europe/London \
-  aptalca/docker-s3cmd
-```
+### files folder
 
-Initial setup: 
-`docker exec -it s3cmd s3cmd --configure`
+For any precompiled files used in either DVB or Nvidia builds
 
-* Enter the access key and the secret key
-* Set region to `UK`
-* Endpoint will be `ams3.digitaloceanspaces.com`
-* DNS-based bucket will be `%(bucket)s.ams3.digitaloceanspaces.com`
-* Rest can be left as default (hit enter)
-* It should test connection and if successful, hit yes to save config
-* The config file will be in the `/config` folder
+### gcc folder
+
+Currently contains Slackware packages for gcc version 8.3 and associated v8.3 files.  When LT compile with gcc version 9.x then gcc and gcc-g++ could be put back into `variables.sh` and gcc-go back into `nvidia-variables.sh` for pulling from slackware-current directly.
