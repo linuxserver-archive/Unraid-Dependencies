@@ -12,7 +12,6 @@ expat \
 fontconfig \
 freetype \
 fribidi \
-gcc-go \
 gdk-pixbuf2 \
 glib2 \
 gtk+2 \
