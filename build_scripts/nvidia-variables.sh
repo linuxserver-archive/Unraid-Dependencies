@@ -58,6 +58,20 @@ xrandr \
 zlib \
 )
 
+
+export STOCK_DIR=${D}/${UNRAID_VERSION}/stock/
+export MODIFIED_DIR=${D}/${UNRAID_VERSION}/nvidia/
+
+mkdir -p ${D}/${UNRAID_VERSION}
+mkdir -p ${STOCK_DIR}
+mkdir -p ${MODIFIED_DIR}
+
+export ROOT_FILES=${D}/unraid-packages/rootfiles
+mkdir -p ${D}/unraid-packages
+mkdir -p ${ROOT_FILES}
+chmod -R 755 ${ROOT_FILES}
+chown -R root:root ${ROOT_FILES}
+
 echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    clean up old files if they exist"
 [[ -f "$D"/NVIDIA_FILE_LIST_CURRENT ]] && rm "$D"/NVIDIA_FILE_LIST_CURRENT
 [[ -f "$D"/NVIDIA_URLS_CURRENT ]] && rm "$D"/NVIDIA_URLS_CURRENT

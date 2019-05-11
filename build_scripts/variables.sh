@@ -67,10 +67,6 @@ export IXGBEVF="4.5.1"
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
 export TEHUTI="0.3.6.17.1"
 
-##current Date (DDExp & TBS OS Version)
-echo -e "${BLUE}Variables.sh${NC}    -----    current Date (DDExp & TBS OS Version)"
-export DATE=$(date +'%d%m%y')
-
 ##find our working folder
 echo -e "${BLUE}Variables.sh${NC}    -----    find our working folder"
 export D="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
@@ -83,13 +79,6 @@ echo -e "${BLUE}Variables.sh${NC}    -----    clean up old files if they exist"
 ##current Unraid Version
 echo -e "${BLUE}Variables.sh${NC}    -----    current Unraid Version"
 export UNRAID_VERSION=$(cat /etc/unraid-version | tr "." - | cut -d '"' -f2)
-
-export STOCK_DIR=${D}/${UNRAID_VERSION}/stock/
-export MODIFIED_DIR=${D}/${UNRAID_VERSION}/nvidia/
-
-mkdir -p ${D}/${UNRAID_VERSION}
-mkdir -p ${STOCK_DIR}
-mkdir -p ${MODIFIED_DIR}
 
 ##Unraid Download
 echo -e "${BLUE}Variables.sh${NC}    -----    current Unraid Version Download"
@@ -106,13 +95,6 @@ do
 package_locations_current=$(grep "/$i-[[:digit:]].*.txz$" FILE_LIST_CURRENT | cut -b 53-9001)
 echo "$slack_package_current_urlbase""$package_locations_current" >> "$D"/URLS_CURRENT
 done
-
-export ROOT_FILES=${D}/unraid-packages/rootfiles
-mkdir -p ${D}/unraid-packages
-mkdir -p ${ROOT_FILES}
-chmod -R 755 ${ROOT_FILES}
-chown -R root:root ${ROOT_FILES}
-
 
 declare -A oot_driver_map=(
     	["6.6.6"]="ixgbe"
