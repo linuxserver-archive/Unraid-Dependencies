@@ -1,25 +1,19 @@
 ![https://linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)
 
 
-## NVIDIA Driver Install
+![https://linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)
 
-* From a base Unraid install and in a dedicated cache directory run this.
+## Unraid Dependencies
 
-It will compile the kernel, with the nvidia kernel modules and nvidia drivers.  
+### Format of variable files
+* Commmon variables `variables.sh`
+* Nvidia specific variables `nvidia-variables.sh`
+* DVB specific variables `dvb-variables.sh`
 
-```
-#!/bin/bash
+### files folder
 
-wget -nc https://raw.githubusercontent.com/linuxserver/Unraid-Nvidia/master/build_scripts/build.sh
-chmod +x build.sh
-./build.sh
-```
+For any precompiled files used in either DVB or Nvidia builds
 
-To grab card identity
-`lspci -v | grep GeForce | grep VGA | cut -d [ -f 2 | cut -d ] -f 1`
+### gcc folder
 
-To grab driver module
-`lspci -v | grep driver | grep nvidia | cut -d : -f 2`
-
-To grab kernel module
-`lspci -v | grep modules | grep nvidia | cut -d : -f 2`
+Currently contains Slackware packages for gcc version 8.3 and associated v8.3 files.  When LT compile with gcc version 9.x then gcc and gcc-g++ could be put back into `variables.sh` and gcc-go back into `nvidia-variables.sh` for pulling from slackware-current directly.
