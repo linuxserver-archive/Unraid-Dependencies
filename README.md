@@ -13,4 +13,4 @@ For any precompiled files used in either DVB or Nvidia builds
 
 ### gcc folder
 
-Currently contains Slackware packages for gcc version 8.3 and associated v8.3 files.  When LT compile with gcc version 9.x then gcc and gcc-g++ could be put back into `variables.sh` and gcc-go back into `nvidia-variables.sh` for pulling from slackware-current directly.
+Currently contains Slackware packages for `gcc` version 8.3 and associated v8.3 gcc packages.  When LT compile with `gcc` version 9.x then `gcc` and `gcc-g++` could be put back into `variables.sh` and `gcc-go` back into `nvidia-variables.sh` for pulling from slackware-current directly.
