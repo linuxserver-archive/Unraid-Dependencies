@@ -23,5 +23,3 @@ Initial setup:
 * Rest can be left as default (hit enter)
 * It should test connection and if successful, hit yes to save config
 * The config file will be in the `/config` folder
-
-Leave the container running while the build scripts run
