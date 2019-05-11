@@ -13,8 +13,6 @@ cpio \
 elfutils \
 flex \
 gc \
-gcc \
-gcc-g++ \
 git \
 glibc \
 glibc-solibs \
