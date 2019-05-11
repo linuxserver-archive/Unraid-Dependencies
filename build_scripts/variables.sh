@@ -67,7 +67,7 @@ export IXGBEVF="4.5.1"
 
 ##tehuti Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
-export TEHUTI="0.3.6.17"
+export TEHUTI="0.3.6.17.1"
 
 ##current Date (DDExp & TBS OS Version)
 echo -e "${BLUE}Variables.sh${NC}    -----    current Date (DDExp & TBS OS Version)"
