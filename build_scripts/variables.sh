@@ -17,6 +17,7 @@ git \
 glibc \
 glibc-solibs \
 guile \
+gettext \
 kernel-headers \
 kernel-modules \
 lftp \
@@ -58,10 +59,12 @@ export RRSHORT=$(echo $RR | cut -d"-" -f1)
 ##current Intel 10GB IXGBE - See https://downloadcenter.intel.com/download/14687/Intel-Network-Adapter-Driver-for-PCIe-Intel-10-Gigabit-Ethernet-Network-Connections-Under-Linux-?product=36773
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGBE="5.5.5"
+export IXGBE_INTEL_NUMBER="28945"
 
 ##current Intel 10GB IXGBEVF - See https://downloadcenter.intel.com/download/18700/Intel-Network-Adapter-Virtual-Function-Driver-for-Intel-10-Gigabit-Ethernet-Network-Connections?product=36773
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBEVF driver"
 export IXGBEVF="4.5.1"
+export IXGBEVF_INTEL_NUMBER="28521"
 
 ##tehuti Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
