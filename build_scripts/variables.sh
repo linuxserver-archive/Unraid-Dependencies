@@ -56,6 +56,11 @@ echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid RR3740A Release
 export RR="1.17.0_18_06_15"
 export RRSHORT=$(echo $RR | cut -d"-" -f1)
 
+##current RocketNVMe Driver - See http://www.highpoint-tech.com/USA_new/series-ssd7101a-1-download.htm
+echo -e "${BLUE}Variables.sh${NC}    -----    current RocketNVMe Release - "
+export RN="1.2.16_19_05_06"
+export RNSHORT=$(echo $RN | cut -d"-" -f1)
+
 ##current Intel 10GB IXGBE - See https://downloadcenter.intel.com/download/14687/Intel-Network-Adapter-Driver-for-PCIe-Intel-10-Gigabit-Ethernet-Network-Connections-Under-Linux-?product=36773
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGBE="5.5.5"
@@ -68,7 +73,7 @@ export IXGBEVF_INTEL_NUMBER="28521"
 
 ##tehuti Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
-export TEHUTI="0.3.6.17"
+export TEHUTI="0.3.6.17.2"
 
 ##find our working folder
 echo -e "${BLUE}Variables.sh${NC}    -----    find our working folder"
@@ -106,7 +111,7 @@ declare -A oot_driver_map=(
         ["6.7.1"]="ixgbe,tehuti"
         ["6.7.2"]="ixgbe,tehuti"
         ["6.7.3-rc4"]="ixgbe,tehuti"
-        ["6.8.0-rc1"]=""
+        ["6.8.0-rc1"]="tehuti,rocketnvme,unraidmd"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_DOWNLOAD_VERSION]}"
