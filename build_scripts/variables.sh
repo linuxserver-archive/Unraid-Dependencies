@@ -111,7 +111,7 @@ declare -A oot_driver_map=(
         ["6.7.1"]="ixgbe,tehuti"
         ["6.7.2"]="ixgbe,tehuti"
         ["6.7.3-rc4"]="ixgbe,tehuti"
-        ["6.8.0-rc1"]="tehuti,rocketnvme,unraidmd"
+        ["6.8.0-rc1"]="tehuti,rocketnvme"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_DOWNLOAD_VERSION]}"
