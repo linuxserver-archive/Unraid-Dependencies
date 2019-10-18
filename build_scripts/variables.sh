@@ -75,6 +75,10 @@ export IXGBEVF_INTEL_NUMBER="28521"
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
 export TEHUTI="0.3.6.17.2"
 
+##Realtek r8125 Driver
+echo -e "${BLUE}Variables.sh${NC}    -----    current Realtek r8125 Driver"
+export REALTEK="9.002.02"
+
 ##find our working folder
 echo -e "${BLUE}Variables.sh${NC}    -----    find our working folder"
 export D="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
