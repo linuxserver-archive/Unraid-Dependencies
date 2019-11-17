@@ -20,6 +20,7 @@ glibc \
 glibc-solibs \
 guile \
 gettext \
+isl \
 kernel-headers \
 kernel-modules \
 lftp \
