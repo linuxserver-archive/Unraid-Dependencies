@@ -66,8 +66,8 @@ export RNSHORT=$(echo $RN | cut -d"-" -f1)
 
 ##current Intel 10GB IXGBE - See https://downloadcenter.intel.com/download/14687/Intel-Network-Adapter-Driver-for-PCIe-Intel-10-Gigabit-Ethernet-Network-Connections-Under-Linux-?product=36773
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
-export IXGBE="5.5.5"
-export IXGBE_INTEL_NUMBER="28945"
+export IXGBE="5.6.3"
+export IXGBE_INTEL_NUMBER="14687"
 
 ##current Intel 10GB IXGBEVF - See https://downloadcenter.intel.com/download/18700/Intel-Network-Adapter-Virtual-Function-Driver-for-Intel-10-Gigabit-Ethernet-Network-Connections?product=36773
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBEVF driver"
@@ -124,6 +124,7 @@ declare -A oot_driver_map=(
         ["6.8.0-rc5"]="tehuti,rocketnvme,realtek"
         ["6.8.0-rc6"]="tehuti,rocketnvme,realtek"
         ["6.8.0-rc7"]="tehuti,rocketnvme,realtek"
+        ["6.8.0-rc8"]="rocketnvme,realtek"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_DOWNLOAD_VERSION]}"
