@@ -56,7 +56,7 @@ export ROCKETSHORT=$(echo $ROCKET | cut -d"-" -f1)
 
 ##current RocketRaid RR3740A Release
 echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid RR3740A Release - "
-export RR="1.17.0_18_06_15"
+export RR="1.19.0_19_04_04"
 export RRSHORT=$(echo $RR | cut -d"-" -f1)
 
 ##current RocketNVMe Driver - See http://www.highpoint-tech.com/USA_new/series-ssd7101a-1-download.htm
@@ -64,9 +64,9 @@ echo -e "${BLUE}Variables.sh${NC}    -----    current RocketNVMe Release - "
 export RN="1.2.16_19_05_06"
 export RNSHORT=$(echo $RN | cut -d"-" -f1)
 
-##current Intel 10GB IXGBE - See https://downloadcenter.intel.com/download/14687/Intel-Network-Adapter-Driver-for-PCIe-Intel-10-Gigabit-Ethernet-Network-Connections-Under-Linux-?product=36773
+##current Intel 10GB IXGBE - See https://sourceforge.net/projects/e1000/files/ixgbe%20stable/
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
-export IXGBE="5.6.3"
+export IXGBE="5.6.5"
 export IXGBE_INTEL_NUMBER="14687"
 
 ##current Intel 10GB IXGBEVF - See https://downloadcenter.intel.com/download/18700/Intel-Network-Adapter-Virtual-Function-Driver-for-Intel-10-Gigabit-Ethernet-Network-Connections?product=36773
