@@ -25,6 +25,7 @@ kernel-headers \
 kernel-modules \
 lftp \
 libcgroup \
+libffi \
 libgudev \
 libmpc \
 libtool \
