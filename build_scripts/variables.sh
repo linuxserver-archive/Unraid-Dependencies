@@ -28,6 +28,7 @@ libcgroup \
 libffi \
 libgudev \
 libmpc \
+libmnl \
 libtool \
 libunistring \
 m4 \
