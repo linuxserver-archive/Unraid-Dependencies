@@ -66,15 +66,17 @@ echo -e "${BLUE}Variables.sh${NC}    -----    current RocketNVMe Release - "
 export RN="1.2.16_19_05_06"
 export RNSHORT=$(echo $RN | cut -d"-" -f1)
 
+##current Intel IXGB - See https://sourceforge.net/projects/e1000/files/igb%20stable/
+echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
+export IXGB="5.3.5.42"
+
 ##current Intel 10GB IXGBE - See https://sourceforge.net/projects/e1000/files/ixgbe%20stable/
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGBE="5.6.5"
-export IXGBE_INTEL_NUMBER="14687"
 
-##current Intel 10GB IXGBEVF - See https://downloadcenter.intel.com/download/18700/Intel-Network-Adapter-Virtual-Function-Driver-for-Intel-10-Gigabit-Ethernet-Network-Connections?product=36773
+##current Intel 10GB IXGBEVF - See https://sourceforge.net/projects/e1000/files/ixgbevf%20stable/
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBEVF driver"
 export IXGBEVF="4.5.1"
-export IXGBEVF_INTEL_NUMBER="28521"
 
 ##tehuti Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
