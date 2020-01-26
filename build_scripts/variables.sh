@@ -132,6 +132,7 @@ declare -A oot_driver_map=(
         ["6.8.0-rc9"]="ixgbe,rocketnvme,realtek"
         ["6.8.0"]="ixgbe,realtek,rocketnvme,rr3740a,,tehuti"
         ["6.8.1"]="ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
+        ["6.8.2"]="ixgb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_DOWNLOAD_VERSION]}"
