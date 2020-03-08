@@ -25,12 +25,12 @@ kernel-headers \
 kernel-modules \
 lftp \
 libcgroup \
-libffi \
 libgudev \
 libmpc \
-libmnl \
 libtool \
 libunistring \
+libffi \
+libmnl \
 m4 \
 make \
 mpfr \
@@ -73,10 +73,12 @@ export IXGB="5.3.5.42"
 ##current Intel 10GB IXGBE - See https://sourceforge.net/projects/e1000/files/ixgbe%20stable/
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGBE="5.6.5"
+export IXGBE_INTEL_NUMBER="14687"
 
-##current Intel 10GB IXGBEVF - See https://sourceforge.net/projects/e1000/files/ixgbevf%20stable/
+##current Intel 10GB IXGBEVF - See https://downloadcenter.intel.com/download/18700/Intel-Network-Adapter-Virtual-Function-Driver-for-Intel-10-Gigabit-Ethernet-Network-Connections?product=36773
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBEVF driver"
 export IXGBEVF="4.5.1"
+export IXGBEVF_INTEL_NUMBER="28521"
 
 ##tehuti Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
@@ -86,34 +88,10 @@ export TEHUTI="0.3.6.17.2"
 echo -e "${BLUE}Variables.sh${NC}    -----    current Realtek r8125 Driver"
 export REALTEK="9.002.02"
 
-##find our working folder
-echo -e "${BLUE}Variables.sh${NC}    -----    find our working folder"
-export D="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
-
 ##clean up old files if they exist
 echo -e "${BLUE}Variables.sh${NC}    -----    clean up old files if they exist"
 [[ -f "$D"/FILE_LIST_CURRENT ]] && rm "$D"/FILE_LIST_CURRENT
 [[ -f "$D"/URLS_CURRENT ]] && rm "$D"/URLS_CURRENT
-
-##current Unraid Version
-echo -e "${BLUE}Variables.sh${NC}    -----    current Unraid Version"
-export UNRAID_VERSION=$(cat /etc/unraid-version | tr "." - | cut -d '"' -f2)
-
-##Unraid Download
-echo -e "${BLUE}Variables.sh${NC}    -----    current Unraid Version Download"
-export UNRAID_DOWNLOAD_VERSION=$(grep -o '".*"' /etc/unraid-version | sed 's/"//g')
-
-##get slackware64-current FILE_LIST
-echo -e "${BLUE}Variables.sh${NC}    -----    get slackware64-current FILE_LIST"
-wget -nc http://mirrors.slackware.com/slackware/slackware64-current/slackware64/FILE_LIST -O $D/FILE_LIST_CURRENT
-
-slack_package_current_urlbase="http://mirrors.slackware.com/slackware/slackware64-current/slackware64"
-
-for i in "${slack_package_current[@]}"
-do
-package_locations_current=$(grep "/$i-[[:digit:]].*.txz$" FILE_LIST_CURRENT | cut -b 53-9001)
-echo "$slack_package_current_urlbase""$package_locations_current" >> "$D"/URLS_CURRENT
-done
 
 declare -A oot_driver_map=(
     	["6.6.6"]="ixgbe"
@@ -131,12 +109,13 @@ declare -A oot_driver_map=(
         ["6.8.0-rc8"]="ixgbe,rocketnvme,realtek"
         ["6.8.0-rc9"]="ixgbe,rocketnvme,realtek"
         ["6.8.0"]="ixgbe,realtek,rocketnvme,rr3740a,,tehuti"
-        ["6.8.1"]="ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
+        ["6.8.1"]="ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti,wireguard,wireguard-tools"
         ["6.8.2"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
         ["6.8.3"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
+        ["6.9.0-rc1"]=""
 )
 
-export OOT_DRIVERS="${oot_driver_map[$UNRAID_DOWNLOAD_VERSION]}"
+export OOT_DRIVERS="${oot_driver_map[$UNRAID_VERSION]}"
 
 ##Change to current directory
 echo -e "${BLUE}Variables.sh${NC}    -----    Change to current directory"
