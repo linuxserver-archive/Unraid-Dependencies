@@ -49,7 +49,3 @@ zstd \
 echo -e "${BLUE}Variables.sh${NC}    -----    clean up old files if they exist"
 [[ -f "$D"/FILE_LIST_CURRENT ]] && rm "$D"/FILE_LIST_CURRENT
 [[ -f "$D"/URLS_CURRENT ]] && rm "$D"/URLS_CURRENT
-
-##Change to current directory
-echo -e "${BLUE}Variables.sh${NC}    -----    Change to current directory"
-cd ${D}
