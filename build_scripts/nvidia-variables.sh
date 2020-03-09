@@ -2,7 +2,7 @@
 set -e
 
 ##set our package list - Note gcc-go fixed for now until LT upgrade to GCC v9.x
-nvidia_package_current=(\
+export nvidia_package_current=(\
 atk \
 bzip2 \
 cairo \
