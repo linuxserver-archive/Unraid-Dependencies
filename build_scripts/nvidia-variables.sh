@@ -2,7 +2,6 @@
 set -e
 
 ##set our package list - Note gcc-go fixed for now until LT upgrade to GCC v9.x
-echo -e "${BLUE}NVIDIA Variables.sh${NC}    -----    set our package list"
 nvidia_package_current=(\
 atk \
 bzip2 \
@@ -61,5 +60,4 @@ zlib \
 )
 
 ##current NVIDIA Release from Slackbuild
-echo -e "${BLUE}Install Packages.sh${NC}    -----    current NVIDIA Release - "
 export NVIDIA_DRIVER_VERSION="$(curl -silent https://slackbuilds.org/slackbuilds/14.2/system/nvidia-driver/nvidia-driver.info | grep VERSION= | cut -d"=" -f2 | sed -e 's/^"//' -e 's/"$//')"

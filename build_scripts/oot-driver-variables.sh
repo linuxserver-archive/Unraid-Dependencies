@@ -2,40 +2,32 @@
 set -e
 
 ##current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
 export ROCKET="1.2.11-18_06_26"
 export ROCKETSHORT=$(echo $ROCKET | cut -d"-" -f1)
 
 ##current RocketRaid RR3740A Release
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current RocketRaid RR3740A Release - "
 export RR="1.19.0_19_04_04"
 export RRSHORT=$(echo $RR | cut -d"-" -f1)
 
 ##current RocketNVMe Driver - See http://www.highpoint-tech.com/USA_new/series-ssd7101a-1-download.htm
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current RocketNVMe Release - "
 export RN="1.2.16_19_05_06"
 export RNSHORT=$(echo $RN | cut -d"-" -f1)
 
 ##current Intel IXGB - See https://sourceforge.net/projects/e1000/files/igb%20stable/
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGB="5.3.5.42"
 
 ##current Intel 10GB IXGBE - See https://sourceforge.net/projects/e1000/files/ixgbe%20stable/
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGBE="5.6.5"
 export IXGBE_INTEL_NUMBER="14687"
 
 ##current Intel 10GB IXGBEVF - See https://downloadcenter.intel.com/download/18700/Intel-Network-Adapter-Virtual-Function-Driver-for-Intel-10-Gigabit-Ethernet-Network-Connections?product=36773
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current Intel 10GB IXGBEVF driver"
 export IXGBEVF="4.5.1"
 export IXGBEVF_INTEL_NUMBER="28521"
 
 ##tehuti Driver
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current Tehuti 10GB Driver"
 export TEHUTI="0.3.6.17.2"
 
 ##Realtek r8125 Driver
-echo -e "${BLUE}OOT Variables.sh${NC}    -----    current Realtek r8125 Driver"
 export REALTEK="9.002.02"
 
 
