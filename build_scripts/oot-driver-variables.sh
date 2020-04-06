@@ -50,7 +50,7 @@ declare -A oot_driver_map=(
         ["6.8.1"]="ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti,wireguard,wireguard-tools"
         ["6.8.2"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
         ["6.8.3"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
-        ["6.9.0-rc1"]=""
+        ["6.9.0-beta1"]=""
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_VERSION]}"
