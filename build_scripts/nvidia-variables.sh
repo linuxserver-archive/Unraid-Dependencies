@@ -43,6 +43,7 @@ libxshmfence,
 libXv,
 libXvMC,
 libXxf86vm,
+libxml2,
 libzip,
 mesa,
 opencl-headers,
@@ -57,6 +58,7 @@ xcb-proto,
 xorgproto,
 xorg-server,
 xrandr,
+wxGTK3,
 zlib
 "
 
