@@ -4,6 +4,7 @@ set -e
 ##set our package list - Note gcc-go fixed for now until LT upgrade to GCC v9.x
 export nvidia_package_current="
 atk,
+brotli,
 bzip2,
 cairo,
 cairomm,
