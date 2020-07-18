@@ -51,26 +51,6 @@ export RED='\e[31m'
 export BLUE='\e[96m'
 export GREEN='\e[92m'
 
-##current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm
-echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
-export RR272X="1.10.6_19_12_05"
-export RR272XSHORT=$(echo $RR272X | cut -d"-" -f1)
-
-##current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/
-echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
-export ROCKET="1.2.11-18_06_26"
-export ROCKETSHORT=$(echo $ROCKET | cut -d"-" -f1)
-
-##current RocketRaid RR3740A Release
-echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid RR3740A Release - "
-export RR="1.19.0_19_04_04"
-export RRSHORT=$(echo $RR | cut -d"-" -f1)
-
-##current RocketNVMe Driver - See http://www.highpoint-tech.com/USA_new/series-ssd7101a-1-download.htm
-echo -e "${BLUE}Variables.sh${NC}    -----    current RocketNVMe Release - "
-export RN="1.2.16_19_05_06"
-export RNSHORT=$(echo $RN | cut -d"-" -f1)
-
 ##current Intel IXGB - See https://sourceforge.net/projects/e1000/files/igb%20stable/
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBE driver"
 export IXGB="5.3.5.42"
@@ -83,13 +63,33 @@ export IXGBE="5.6.5"
 echo -e "${BLUE}Variables.sh${NC}    -----    current Intel 10GB IXGBEVF driver"
 export IXGBEVF="4.5.1"
 
-##tehuti Driver
-echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
-export TEHUTI="0.3.6.17.2"
-
-##Realtek r8125 Driver
+##current Realtek r8125 Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Realtek r8125 Driver"
 export REALTEK="9.003.05"
+
+##current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm
+echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm/"
+export R272X="1.10.6_19_12_05"
+export R272XSHORT=$(echo $R272X | cut -d"-" -f1)
+
+##current RocketRaid RR3740A Release
+echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid RR3740A Release - "
+export R3740A="1.19.0_19_04_04"
+export R3740ASHORT=$(echo $R3740A | cut -d"-" -f1)
+
+##current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/
+echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
+export R750="1.2.11-18_06_26"
+export R750SHORT=$(echo $R750 | cut -d"-" -f1)
+
+##current RocketNVMe Driver - See http://www.highpoint-tech.com/USA_new/series-ssd7101a-1-download.htm
+echo -e "${BLUE}Variables.sh${NC}    -----    current RocketNVMe Release - "
+export RNVME="1.2.16_19_05_06"
+export RNVMESHORT=$(echo $RNVME | cut -d"-" -f1)
+
+##current Tehuti Driver
+echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
+export TEHUTI="0.3.6.17.2"
 
 ##find our working folder
 echo -e "${BLUE}Variables.sh${NC}    -----    find our working folder"
