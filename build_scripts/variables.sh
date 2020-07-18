@@ -53,7 +53,7 @@ export GREEN='\e[92m'
 
 ##current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm
 echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
-export RR272X="1.10.6-19_12_05"
+export RR272X="1.10.6_19_12_05"
 export RR272XSHORT=$(echo $RR272X | cut -d"-" -f1)
 
 ##current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/
