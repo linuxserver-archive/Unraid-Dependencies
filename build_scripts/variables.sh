@@ -51,6 +51,11 @@ export RED='\e[31m'
 export BLUE='\e[96m'
 export GREEN='\e[92m'
 
+##current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm
+echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
+export RR272X="1.10.6-19_12_05"
+export RR272XSHORT=$(echo $RR272X | cut -d"-" -f1)
+
 ##current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/
 echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid R750 Release - See http://www.highpoint-tech.com/BIOS_Driver/R750/Linux/"
 export ROCKET="1.2.11-18_06_26"
@@ -84,7 +89,7 @@ export TEHUTI="0.3.6.17.2"
 
 ##Realtek r8125 Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Realtek r8125 Driver"
-export REALTEK="9.002.02"
+export REALTEK="9.003.05"
 
 ##find our working folder
 echo -e "${BLUE}Variables.sh${NC}    -----    find our working folder"
@@ -135,6 +140,7 @@ declare -A oot_driver_map=(
         ["6.8.2"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
         ["6.8.3"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
         ["6.9.0-beta22"]=""
+        ["6.9.0-beta25"]="rr272x,realtek"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_DOWNLOAD_VERSION]}"
