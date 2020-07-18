@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-##set our package list - Note gcc & gcc-g++ fixed for now until LT upgrade to GCC v9.x
+##set our package list
 export slack_package_current="
 autoconf,
 automake,
