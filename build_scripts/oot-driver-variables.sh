@@ -16,6 +16,10 @@ export IXGBEVF_INTEL_NUMBER="28521"
 echo -e "${BLUE}Variables.sh${NC}    -----    current Realtek r8125 Driver"
 export REALTEK="9.003.05"
 
+##current Realtek r8152 Driver - See https://github.com/wget/realtek-r8152-linux/releases
+echo -e "${BLUE}Variables.sh${NC}    -----    current Realtek r8152 Driver"
+export R8152="2.13.20200712"
+
 ##current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm
 echo -e "${BLUE}Variables.sh${NC}    -----    current RocketRaid RR272x Release - See https://highpoint-tech.com/USA_new/rr272x_download.htm/"
 export R272X="1.10.6_19_12_05"
@@ -38,7 +42,7 @@ export RNVMESHORT=$(echo $RNVME | cut -d"-" -f1)
 
 ##current Tehuti Driver
 echo -e "${BLUE}Variables.sh${NC}    -----    current Tehuti 10GB Driver"
-export TEHUTI="0.3.6.17.2"
+export TEHUTI="0.3.6.17.3"
 
 
 declare -A oot_driver_map=(
@@ -62,6 +66,7 @@ declare -A oot_driver_map=(
         ["6.8.3"]="igb,ixgbe,realtek,rocketnvme,rocketraid,rr3740a,tehuti"
         ["6.9.0-beta22"]=""
         ["6.9.0-beta25"]="rr272x,realtek"
+        ["6.9.0-beta29"]="r8152,tehuti"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_VERSION]}"
