@@ -67,6 +67,7 @@ declare -A oot_driver_map=(
         ["6.9.0-beta22"]=""
         ["6.9.0-beta25"]="rr272x,realtek"
         ["6.9.0-beta29"]="r8152,realtek,rr272x,tehuti"
+        ["6.9.0-beta30"]="r8152,realtek,rr272x,tehuti"
 )
 
 export OOT_DRIVERS="${oot_driver_map[$UNRAID_VERSION]}"
